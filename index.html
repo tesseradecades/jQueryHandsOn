@@ -5,12 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>jQuery Hands On Assignment</title>
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <!--<link rel="stylesheet" href="http://resources/demos/style.css">-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
         <style>
             #draggable { width: 150px; height: 150px; padding: 0.5em; }
         </style>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script>
             $( function() {
                 $( "#datepicker" ).datepicker();
@@ -18,14 +25,24 @@
             $( function() {
                 $( "#draggable" ).draggable();
             } );
+
+            $(document).ready(function(){
+                $('.your-class').slick({
+                    //setting-name: setting-value
+                });
+            });
         </script>
     </head>
     <body>
-    
-        <p>Date: <input type="text" id="datepicker"></p>
-    
         <div id="draggable" class="ui-widget-content">
             <p>Drag me around</p>
+        </div>
+        <div class="your-class">
+            <div>
+                <p>Date: <input type="text" id="datepicker"></p>
+            </div>
+            <div>your content</div>
+            <div>your content</div>
         </div>
     </body>
 </html>
